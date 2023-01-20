@@ -76,6 +76,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  border: none;
+  padding: 0;
+  color: white;
+  font-weight: 200;
+  font-family: 'Inter';
 }
 
 .calc-button:not(:last-child) {
