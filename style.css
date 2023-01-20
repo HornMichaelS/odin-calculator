@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Inter';
+  color: white;
+}
+
+.container {
+  height: 322px;
+  width: 235px;
+  background-color: rgb(84, 85, 86);
+  border-radius: 12px;
+  border: 1px solid lightgrey;
+  box-shadow: -5px 10px 30px grey;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topbar {
+  padding: 9px;
+  padding-bottom: 0;
+  display: flex;
+}
+
+.bar-button {
+  width: 12px;
+  height: 12px;
+  background-color: white;
+  margin-right: 8px;
+  border-radius: 12px;;
+}
+
+.bar-button.bar-button-red {
+  background-color: rgb(255, 95, 87);
+}
+
+.bar-button.bar-button-yellow {
+  background-color: rgb(255, 188, 46);
+}
+
+.bar-button.bar-button-green {
+  background-color: rgb(43, 200, 64);
+}
+
+.display {
+  color: white;
+  text-align: right;
+  padding-right: 14px;
+  padding-bottom: 6px;
+  font-size: 34pt;
+  font-weight: 200;
+}
+
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.button-row {
+  display: flex;
+  flex: 1;
+}
+
+.button-row:not(:last-child) {
+  border-bottom: 1px solid #555;
+}
+
+.calc-button {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calc-button:not(:last-child) {
+  border-right: 1px solid #555;
+}
+
+.calc-button.calc-button-dark {
+  background-color: rgb(101, 102, 103);
+  font-size: 14pt;
+}
+
+.calc-button.calc-button-orange {
+  background-color: rgb(255, 158, 11);
+  font-size: 20pt;
+  font-weight: 300;
+}
+
+.calc-button.calc-button-light {
+  background-color: rgb(126, 127, 128);
+  font-size: 16pt;
+}
+
+.zero-button {
+  flex: 2;
+  padding-right: 1px;
+}
