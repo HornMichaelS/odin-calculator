@@ -1,53 +1,64 @@
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Odin Calculator</title>
 
   <link rel="stylesheet" href="style.css">
   <script type="module" src="src/index.ts"></script>
 </head>
+
 <body>
-  <div class="container">
+  <main class="container">
     <div class="topbar">
       <div class="bar-button bar-button-red"></div>
       <div class="bar-button bar-button-yellow"></div>
       <div class="bar-button bar-button-green"></div>
     </div>
-    <div class="display">0</div>
+    <div id="display">0</div>
     <div class="buttons-container">
       <div class="button-row">
-        <button class="calc-button calc-button-dark">AC</button>
-        <button class="calc-button calc-button-dark"><span><sup>+</sup>/<sub>-</sub></span></button>
-        <button class="calc-button calc-button-dark">%</button>
-        <button class="calc-button calc-button-orange">÷</button>
+        <button calc-button-type="clr" class="calc-button calc-button-dark">AC</button>
+        <button id="negate" calc-button-type="op" class="calc-button calc-button-dark"><span>+/-</span></button>
+        <button id="percent" calc-button-type="op" class="calc-button calc-button-dark">%</button>
+        <button id="div" calc-button-type="op" class="calc-button calc-button-orange">
+          <div class="op-border">÷</div>
+        </button>
       </div>
       <div class="button-row">
-        <button class="calc-button calc-button-light">7</button>
-        <button class="calc-button calc-button-light">8</button>
-        <button class="calc-button calc-button-light">9</button>
-        <button class="calc-button calc-button-orange">×</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">7</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">8</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">9</button>
+        <button id="mul" calc-button-type="op" class="calc-button calc-button-orange">
+          <div class="op-border">×</div>
+        </button>
       </div>
       <div class="button-row">
-        <button class="calc-button calc-button-light">4</button>
-        <button class="calc-button calc-button-light">5</button>
-        <button class="calc-button calc-button-light">6</button>
-        <button class="calc-button calc-button-orange">-</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">4</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">5</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">6</button>
+        <button id="sub" calc-button-type="op" class="calc-button calc-button-orange">
+          <div class="op-border">-</div>
+        </button>
       </div>
       <div class="button-row">
-        <button class="calc-button calc-button-light">1</button>
-        <button class="calc-button calc-button-light">2</button>
-        <button class="calc-button calc-button-light">3</button>
-        <button class="calc-button calc-button-orange">+</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">1</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">2</button>
+        <button calc-button-type="num" class="calc-button calc-button-light">3</button>
+        <button id="add" calc-button-type="op" class="calc-button calc-button-orange">
+          <div class="op-border">+</div>
+        </button>
       </div>
       <div class="button-row">
-        <button class="calc-button calc-button-light zero-button">0</button>
-        <button class="calc-button calc-button-light">.</button>
-        <button class="calc-button calc-button-orange">=</button>
+        <button calc-button-type="num" class="calc-button calc-button-light zero-button">0</button>
+        <button calc-button-type="dec" class="calc-button calc-button-light">.</button>
+        <button id="eq" calc-button-type="op" class="calc-button calc-button-orange">=</button>
       </div>
     </div>
-  </div>
+  </main>
 </body>
+
 </html>
