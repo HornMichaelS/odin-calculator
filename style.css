@@ -8,6 +8,8 @@ body {
   font-family: 'Inter';
   color: white;
   box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .container {
@@ -26,6 +28,17 @@ body {
   padding: 9px;
   padding-bottom: 0;
   display: flex;
+  color: transparent;
+}
+
+.topbar-buttons-container {
+  display: flex;
+}
+
+.topbar-buttons-container:hover {
+  display: flex;
+  color: rgba(0, 0, 0, 0.4);
+  cursor: default;
 }
 
 .bar-button {
@@ -34,6 +47,15 @@ body {
   background-color: white;
   margin-right: 8px;
   border-radius: 12px;;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11pt;
+}
+
+.bar-button>span {
+  position: relative;
+  bottom: 1px;
 }
 
 .bar-button.bar-button-red {
@@ -42,6 +64,7 @@ body {
 
 .bar-button.bar-button-yellow {
   background-color: rgb(255, 188, 46);
+  font-size: 15pt;
 }
 
 .bar-button.bar-button-green {
