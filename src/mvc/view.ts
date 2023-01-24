@@ -25,6 +25,10 @@ export class View {
   }
 
   private handleKeyDown(e: KeyboardEvent) {
+    if (document.activeElement instanceof HTMLElement) {
+      document.activeElement.blur();
+    }
+
     const elem = this.elemForKey(e);
 
     if (elem !== null) {
@@ -63,8 +67,6 @@ export class View {
       default:
         return document.getElementById(e.key);
     }
-
-    return null;
   }
 
   private handleButtonClicked(button: HTMLInputElement) {
