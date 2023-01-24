@@ -19,6 +19,52 @@ export class View {
     buttons.forEach((button) => {
       button.onclick = (e) => this.handleButtonClicked(button);
     });
+
+    document.body.onkeydown = (e) => this.handleKeyDown(e);
+    document.body.onkeyup = (e) => this.handleKeyUp(e);
+  }
+
+  private handleKeyDown(e: KeyboardEvent) {
+    const elem = this.elemForKey(e);
+
+    if (elem !== null) {
+      elem.classList.add("active");
+      this.handleButtonClicked(elem as HTMLInputElement);
+    }
+  }
+
+  private handleKeyUp(e: KeyboardEvent) {
+    document.querySelectorAll(".active").forEach((elem) => {
+      elem.classList.remove("active");
+    });
+  }
+
+  private elemForKey(e: KeyboardEvent): HTMLElement | null {
+    console.log(`${e.altKey ? "Alt+" : ""}${e.key}`);
+    switch (e.key) {
+      case "Escape":
+        return document.getElementById("clr");
+      case "-":
+      case "–":
+        return e.altKey
+          ? document.getElementById("negate")
+          : document.getElementById("sub");
+      case "%":
+        return document.getElementById("percent");
+      case "/":
+        return document.getElementById("div");
+      case "*":
+        return document.getElementById("mul");
+      case "+":
+        return document.getElementById("add");
+      case "=":
+      case "Enter":
+        return document.getElementById("eq");
+      default:
+        return document.getElementById(e.key);
+    }
+
+    return null;
   }
 
   private handleButtonClicked(button: HTMLInputElement) {

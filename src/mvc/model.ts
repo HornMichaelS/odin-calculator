@@ -94,6 +94,7 @@ export class Model {
 
           this.performBinaryOperation(this.selectedOperation);
         }
+        this.isDisplayingResult = true;
         break;
       default:
         if (this.value === undefined) {

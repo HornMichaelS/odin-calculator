@@ -99,7 +99,7 @@ body {
   font-weight: 300;
 }
 
-.calc-button.calc-button-dark:active {
+.calc-button.calc-button-dark:active, .calc-button.calc-button-dark.active {
   background-color: rgb(135, 133, 133);
 }
 
@@ -109,7 +109,7 @@ body {
   font-weight: 300;
 }
 
-.calc-button.calc-button-orange:active {
+.calc-button.calc-button-orange:active, .calc-button.calc-button-orange.active {
   background-color: rgb(203, 126, 7);
 }
 
@@ -118,7 +118,7 @@ body {
   font-size: 16pt;
 }
 
-.calc-button.calc-button-light:active {
+.calc-button.calc-button-light:active, .calc-button.calc-button-light.active {
   background-color: rgb(185, 185, 184);
 }
 
